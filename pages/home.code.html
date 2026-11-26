@@ -654,6 +654,7 @@ html:has(#mcx){scroll-behavior:smooth}
 </div>
 <script>(function(){
 var MCX_BUY={"1": "https://www.moocella.com/cart?affiliate_ref_id=0fc66d42-76b9-49ed-a9ed-a2c0831eadf4&affiliate_source=express_link&sl-ref=", "2": "/products/moocella-beauty-drink-2", "10": "/products/moocella-beauty-drink-10"};var MCX_SHOP='/pages/moocella-shop';
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#mcx a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);e.preventDefault();if(!id)return;var t=document.getElementById(id);if(!t)return;var n=document.querySelector('#mcx .nav.open');if(n)n.classList.remove('open');t.scrollIntoView({behavior:'smooth',block:'start'});try{history.replaceState(null,'',location.href.split('#')[0]+'#'+id)}catch(_){}},true);
 // 公告輪播
 (()=>{const m=[...document.querySelectorAll('.ann-msg')];let i=0;const show=n=>{m[i].classList.remove('on');i=(n+m.length)%m.length;m[i].classList.add('on')};
 document.querySelector('.ann .prev').onclick=()=>show(i-1);document.querySelector('.ann .next').onclick=()=>show(i+1);setInterval(()=>show(i+1),5000);})();
