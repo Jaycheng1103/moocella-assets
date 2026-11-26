@@ -1,0 +1,741 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet"><style>
+body:has(#mcx) #shopline-section-announcement,body:has(#mcx) #shopline-section-header,body:has(#mcx) #shopline-section-footer,body:has(#mcx) .sl-goto-top,body:has(#mcx) .CustomPage-title{display:none!important}
+body:has(#mcx){padding-top:0!important;overflow-x:clip}
+body:has(#mcx) #Content,body:has(#mcx) .CustomPage,body:has(#mcx) .block-inner,body:has(#mcx) .container{padding:0!important;margin:0!important;max-width:none!important;width:auto!important;overflow:visible!important}
+#mcx{overflow-x:clip;font-size:16px;line-height:1.5;text-align:left}
+#mcx h1,#mcx h2,#mcx h3,#mcx h4,#mcx h5,#mcx h6,#mcx p,#mcx ul,#mcx figure{margin:0}
+#mcx{
+  --wine:#5A2835; --wine-dark:#3E1823; --wine-2:#7A3B4E;
+  --blush:#FBE9E4; --cream:#FFF5F1; --pink:#F8EDEB; --footer:#F8F0F2;
+  --gold:#C9A86A; --ink:#2B2B2B; --mute:#7A7A7A; --line:#E7E2E1;
+  --ph:#EDE6E4;
+  --serif:"LXGW WenKai TC","Noto Serif TC",serif; --sans:"Chiron GoRound TC","PingFang TC","Noto Sans TC",sans-serif;
+  --wrap:1312px;
+}
+#mcx *{box-sizing:border-box}
+html:has(#mcx){scroll-behavior:smooth}
+#mcx{overflow-x:clip;margin:0;font-family:var(--sans);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+#mcx img{display:block;max-width:100%}
+#mcx a{color:inherit;text-decoration:none}
+#mcx button{font:inherit;cursor:pointer}
+#mcx .wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media(min-width:900px){#mcx .wrap{padding:0 64px;max-width:1440px}}
+#mcx .h2{font-family:var(--serif);font-weight:700;color:var(--wine);letter-spacing:.06em;font-size:clamp(26px,3vw,36px);line-height:1.3;margin:0}
+#mcx .center{text-align:center}
+#mcx .btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:999px;border:1.5px solid var(--wine);background:var(--wine);color:#fff;font-weight:500;font-size:15px;transition:transform .15s,opacity .15s}
+#mcx .btn:hover{transform:translateY(-1px);opacity:.92}
+#mcx .btn.gold{background:var(--gold);border-color:var(--gold)}
+#mcx .btn.ghost-w{background:transparent;border-color:#fff}
+#mcx .todo{display:flex;align-items:center;justify-content:center;text-align:center;background:var(--ph);color:var(--mute);font-size:14px;padding:12px}
+#mcx .tag-todo{color:#B07A00;background:#FFF4CC;border-radius:3px;padding:0 4px}
+#mcx .ann{background:var(--wine);color:#fff;height:48px;display:flex;align-items:center;justify-content:center;position:relative;font-size:14px;letter-spacing:.04em}
+#mcx .ann button{position:absolute;top:0;height:48px;width:48px;background:none;border:0;color:#fff;font-size:22px}
+#mcx .ann .prev{left:16px}
+#mcx .ann .next{right:16px}
+#mcx .ann-msg{display:none;padding:0 56px;text-align:center}
+#mcx .ann-msg.on{display:block}
+#mcx header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#mcx .hdr{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;padding:0 32px;height:84px;max-width:1440px;margin:0 auto}
+#mcx .logo img{height:48px;width:auto}
+#mcx .nav{display:flex;justify-content:center;align-items:center;gap:34px;font-size:14px;font-weight:500;letter-spacing:.06em;white-space:nowrap;height:100%}
+#mcx .nav>div{position:relative;height:100%;display:flex;align-items:center}
+#mcx .nav a{position:relative;display:inline-flex;align-items:center;gap:6px;padding:6px 0;color:var(--ink);transition:color .2s}
+#mcx .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+#mcx .nav a:hover{color:var(--wine)}
+#mcx .nav a:hover::after{transform:scaleX(1)}
+#mcx .nav .chev{width:9px;height:9px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .25s}
+#mcx .has-mega:hover .chev{transform:translateY(1px) rotate(-135deg)}
+#mcx .tools{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--ink)}
+#mcx .tools .cur{letter-spacing:.06em;font-weight:500}
+#mcx .tools svg{width:21px;height:21px;display:block;stroke:currentColor;fill:none;stroke-width:1.6;transition:color .2s}
+#mcx .tools a:hover{color:var(--wine)}
+#mcx .tools .cart{position:relative}
+#mcx .tools .cart b{position:absolute;top:-6px;right:-8px;width:16px;height:16px;border-radius:50%;background:var(--wine);color:#fff;font-size:10px;font-weight:500;display:flex;align-items:center;justify-content:center}
+#mcx .burger{display:none;background:none;border:0;width:40px;height:40px;padding:8px;color:var(--ink)}
+#mcx .burger svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none}
+#mcx .mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.08);padding:32px 64px 40px;display:none;grid-template-columns:3fr 1fr;gap:48px;animation:mcx-megaIn .25s ease}
+@keyframes mcx-megaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+#mcx header.site:has(.has-mega:hover) .mega,#mcx .mega:hover{display:grid}
+#mcx .mega h6{margin:0 0 16px;font-size:12px;letter-spacing:.16em;color:var(--mute)}
+#mcx .mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+#mcx .mega-item{display:flex;gap:14px;align-items:center}
+#mcx .mega-item .pic{width:96px;height:96px;border-radius:8px;background:var(--blush);flex:none;overflow:hidden}
+#mcx .mega-item .pic img{width:100%;height:100%;object-fit:contain}
+#mcx .mega-item b{display:block;font-size:15px}
+#mcx .mega-item small{display:block;color:var(--wine);font-size:13px;margin-top:4px}
+#mcx .mega-item em{display:block;color:var(--mute);font-size:12px;font-style:normal;margin-top:2px}
+#mcx .mega ul{list-style:none;margin:0;padding:0;line-height:2.3;font-size:15px}
+#mcx .hero{position:relative;min-height:605px;background:linear-gradient(90deg,var(--wine-dark),var(--wine-2));color:#fff;overflow:hidden;display:grid;grid-template-columns:600px 1fr}
+#mcx .hero-img{display:flex;align-items:center;justify-content:center}
+#mcx .hero-img img{width:100%;height:605px;object-fit:contain}
+#mcx .hero-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 200px 40px 0}
+#mcx .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,3vw,40px);letter-spacing:.08em;line-height:1.35;margin:0 0 20px}
+#mcx .hero p{font-size:clamp(16px,1.6vw,20px);line-height:1.7;margin:0 0 36px;color:#F3DDE2}
+#mcx .hero .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+#mcx .hero .btns .btn{width:200px}
+#mcx .hang{position:absolute;right:60px;top:100px;width:150px;height:210px;border-radius:14px;background:var(--blush);color:var(--wine);transform:rotate(-6deg);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+#mcx .hang::before{content:"";position:absolute;top:-60px;left:50%;width:1px;height:60px;background:var(--gold)}
+#mcx .hang .b{font-size:12px;letter-spacing:.3em;font-weight:700}
+#mcx .hang .big{font-family:var(--serif);font-size:44px;margin:6px 0}
+#mcx .hang small{font-size:12px}
+#mcx .logos{display:flex;align-items:center;height:139px;overflow:hidden;gap:40px;padding-left:20px}
+#mcx .logos .lbl{font-size:12px;letter-spacing:.2em;font-weight:500;flex:none}
+#mcx .marquee{overflow:hidden;flex:1;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+#mcx .track{display:flex;align-items:center;gap:0;width:max-content;animation:mcx-mq 110s linear infinite}
+#mcx .track .todo{width:185px;height:44px;background:#fff;border:1px dashed #D6CFCD;flex:none}
+#mcx .track img{height:52px;width:auto;max-width:150px;object-fit:contain;flex:none;margin-right:48px;transition:transform .3s}
+#mcx .track img:hover{transform:scale(1.08)}
+#mcx .marquee:hover .track{animation-play-state:paused}
+@keyframes mcx-mq{to{transform:translateX(-50%)}}
+#mcx .vshop{padding:50px 0 30px;overflow:hidden}
+#mcx .vshop .h2{margin-bottom:48px}
+#mcx .vviewport{--wa:310px;--ws:240px;--gap:16px;--ease:cubic-bezier(.22,.8,.24,1);position:relative;height:calc(var(--wa) * 16 / 9);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+#mcx .vtrack{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;gap:var(--gap);will-change:transform;transition:transform .6s var(--ease)}
+#mcx .vcard{flex:none;width:var(--ws);position:relative;cursor:pointer;transition:width .6s var(--ease)}
+#mcx .vcard.active{width:var(--wa);cursor:zoom-in}
+#mcx .vtrack.nt,#mcx .vtrack.nt .vcard,#mcx .vtrack.nt .vmedia{transition:none!important}
+#mcx .vmedia{aspect-ratio:9/16;border-radius:20px;overflow:hidden;position:relative;background:#000;transition:box-shadow .6s var(--ease)}
+#mcx .vcard.active .vmedia{box-shadow:0 16px 36px rgba(90,40,53,.28)}
+#mcx .vmedia video{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+#mcx .vctl{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:6px;opacity:0;transition:opacity .4s;z-index:2}
+#mcx .vcard.active .vctl{opacity:1}
+#mcx .vctl button{width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.42);color:#fff;font-size:13px;padding:0;line-height:32px}
+#mcx .vcard .ptag{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;background:#fff;border-radius:10px;display:flex;align-items:center;gap:8px;padding:7px 8px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+#mcx .ptag .th{width:38px;height:38px;border-radius:4px;background:var(--blush);overflow:hidden;flex:none}
+#mcx .ptag .th img{width:100%;height:100%;object-fit:contain}
+#mcx .ptag div{flex:1;min-width:0;font-size:11.5px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mcx .ptag div span{color:var(--mute)}
+#mcx .ptag .add{width:26px;height:26px;border-radius:50%;background:var(--wine);color:#fff;border:0;font-size:16px;line-height:26px;padding:0}
+#mcx .arrows{display:flex;justify-content:center;gap:28px;margin-top:20px}
+#mcx .arrows button{background:none;border:0;font-size:22px;color:var(--ink)}
+#mcx .strip{background:var(--cream);padding:28px 16px;text-align:center;font-size:clamp(17px,1.6vw,22px);line-height:1.6}
+#mcx .strip p{max-width:1017px;margin:0 auto}
+#mcx .products{padding-top:40px;padding-bottom:60px}
+#mcx .slider{display:flex;gap:30px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:40px;padding-right:64px}
+#mcx .slider::-webkit-scrollbar{display:none}
+#mcx .pcard{flex:none;width:375px;scroll-snap-align:start}
+#mcx .pimg{position:relative;width:375px;height:375px;border-radius:10px;overflow:hidden;background:var(--blush)}
+#mcx .pimg img{width:100%;height:100%;object-fit:contain}
+#mcx .pimg .corner{position:absolute;top:14px;left:14px;width:68px;height:68px;border-radius:50%;background:var(--wine);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+#mcx .pcard h3{font-size:17px;margin:18px 0 10px;line-height:1.45}
+#mcx .stars{color:var(--wine);font-size:13px}
+#mcx .stars span{color:var(--mute);margin-left:6px}
+#mcx .price{display:flex;align-items:center;gap:10px;margin:10px 0}
+#mcx .price b{font-size:20px;font-weight:500}
+#mcx .price s{color:var(--mute);font-size:13px}
+#mcx .pill{background:var(--blush);color:var(--wine);font-size:12px;padding:3px 10px;border-radius:4px}
+#mcx .pcard p{font-size:13px;color:var(--mute);line-height:1.6;margin:0}
+#mcx .dots{display:flex;gap:10px;justify-content:center;margin-top:36px}
+#mcx .dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+#mcx .dots i.on{background:var(--wine)}
+#mcx .quiz{padding:24px 16px 56px;text-align:center}
+#mcx .quiz h2{font-size:clamp(22px,2.4vw,30px)}
+#mcx .quiz p{color:var(--mute);margin:16px 0 40px}
+#mcx .imgcard{position:relative;padding-bottom:70px;display:grid;grid-template-columns:632px 1fr}
+#mcx .imgcard .pic{height:700px;border-radius:16px;overflow:hidden;background:var(--blush)}
+#mcx .imgcard .pic img{width:100%;height:100%;object-fit:cover}
+#mcx .imgcard .card{position:relative;margin:75px 0 0 -60px;background:var(--pink);border-radius:16px;padding:56px 42px;align-self:start}
+#mcx .imgcard .card p{line-height:1.7;margin:18px 0 28px;max-width:600px}
+#mcx .imgcard.short .pic{height:345px;margin-top:55px}
+#mcx .imgcard.short .card{margin-top:136px}
+#mcx .imgcard ul{margin:18px 0 28px;padding-left:18px;line-height:2}
+#mcx .need{background:var(--pink);padding:64px 0 60px}
+#mcx .need-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:32px;margin-top:40px}
+#mcx .need-grid a{display:block;text-align:center}
+#mcx .need-grid .pic{aspect-ratio:2/3;border-radius:14px;overflow:hidden;background:var(--ph)}
+#mcx .need-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+#mcx .need-grid a:hover img{transform:scale(1.04)}
+#mcx .need-grid span{display:block;margin-top:20px;font-size:16px;font-weight:500}
+#mcx .need-grid small{display:block;margin-top:4px;font-size:13px;color:var(--wine);font-weight:400;letter-spacing:.05em}
+#mcx .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1180px;margin:0 auto;padding-top:56px;padding-bottom:56px;text-align:center}
+#mcx .trust>div{display:flex;flex-direction:column;align-items:center;gap:18px}
+#mcx .trust .blob{width:78px;height:78px;display:flex;align-items:center;justify-content:center;background:#F6E4E6;transition:transform .5s cubic-bezier(.22,.8,.24,1),border-radius .8s ease}
+#mcx .trust .b1{border-radius:46% 54% 42% 58%/55% 45% 55% 45%}
+#mcx .trust .b2{border-radius:58% 42% 52% 48%/44% 56% 44% 56%}
+#mcx .trust .b3{border-radius:42% 58% 55% 45%/52% 42% 58% 48%}
+#mcx .trust .b4{border-radius:52% 48% 44% 56%/58% 46% 54% 42%}
+#mcx .trust>div:hover .blob{transform:translateY(-4px) rotate(-6deg);border-radius:50%}
+#mcx .trust svg{width:44px;height:44px}
+#mcx .trust b{font-size:17px;font-weight:500;letter-spacing:.06em;color:var(--ink)}
+#mcx .ba{background:var(--pink);padding:20px 0 60px;text-align:center}
+#mcx .ba .eyebrow{color:var(--mute);font-size:16px}
+#mcx .ba-grid{display:grid;grid-template-columns:repeat(3,400px);justify-content:space-between;margin-top:34px}
+#mcx .compare{position:relative;width:400px;height:400px;border-radius:6px;overflow:hidden;--pos:50%;user-select:none;touch-action:none}
+#mcx .compare .side{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:14px}
+#mcx .compare .before{background:#D9CFCC}
+#mcx .compare .after{background:#EDE6E4;clip-path:inset(0 0 0 var(--pos))}
+#mcx .compare .bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:#fff;transform:translateX(-1px)}
+#mcx .compare .knob{position:absolute;top:50%;left:var(--pos);width:40px;height:40px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;color:var(--wine);font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.15);font-size:13px}
+#mcx .compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+#mcx .ba-grid p{margin:20px 0 0;line-height:1.8;font-size:15px}
+#mcx .ba-grid p span{color:var(--mute)}
+#mcx .vtest{padding:50px 0 60px;position:relative}
+#mcx .vtest .row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:56px;padding:0 39px}
+#mcx .vtest .row::-webkit-scrollbar{display:none}
+#mcx .vt{flex:none;width:324px;aspect-ratio:9/16;border-radius:0;overflow:hidden;position:relative;scroll-snap-align:start;background:var(--ph)}
+#mcx .vt img{width:100%;height:100%;object-fit:cover}
+#mcx .vt .play{position:absolute;left:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.7);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
+#mcx .vt .who{position:absolute;left:58px;bottom:18px;color:#fff;font-size:13px;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+#mcx .vtest .side-arrow{position:absolute;top:55%;background:none;border:0;font-size:30px;color:var(--mute)}
+#mcx .vtest .l{left:6px}
+#mcx .vtest .r{right:6px}
+#mcx .cmp{position:relative;min-height:750px;display:grid;grid-template-columns:720px 1fr;align-items:center;overflow:hidden}
+#mcx .cmp::before{content:"";position:absolute;left:-145px;top:0;width:1000px;height:750px;border-radius:50%;background:var(--pink);z-index:0}
+#mcx .cmp-vis{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;gap:40px;padding-left:80px}
+#mcx .cmp-vis figure{margin:0;text-align:center;width:200px}
+#mcx .cmp-vis .p1{height:320px;display:flex;align-items:flex-end;justify-content:center}
+#mcx .cmp-vis .p1 img{height:320px;width:auto;object-fit:contain}
+#mcx .cmp-vis .p2{height:260px;width:110px;margin:0 auto;border-radius:8px;background:#fff;color:var(--mute);font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px}
+#mcx .cmp-vis .eq{font-size:40px;padding-bottom:170px}
+#mcx .cmp-vis .dot{width:24px;height:24px;border-radius:50%;margin:24px auto 12px;background:var(--wine)}
+#mcx .cmp-vis .dot.g{background:var(--mute)}
+#mcx .cmp-vis b{display:block;font-size:15px;letter-spacing:.06em;color:var(--wine)}
+#mcx .cmp-vis figure:last-child b{color:var(--ink)}
+#mcx .cmp-vis small{display:block;margin-top:8px;font-size:15px}
+#mcx .cmp-copy{position:relative;z-index:1;padding-right:64px}
+#mcx .cmp-copy h2{font-size:34px}
+#mcx .cmp-copy ul{padding-left:18px;line-height:2.2;font-size:15px;margin-top:28px}
+#mcx .promise{padding-top:24px;padding-bottom:80px;text-align:center}
+#mcx .promise-row{display:flex;justify-content:center;gap:32px;margin-top:64px;flex-wrap:wrap}
+#mcx .promise-row div{width:140px}
+#mcx .promise-row i{display:block;width:56px;height:56px;border-radius:50%;background:var(--wine);margin:0 auto 22px}
+#mcx .promise-row span{font-size:16px;font-weight:500}
+#mcx .blog{padding-top:104px;padding-bottom:80px}
+#mcx .blog-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:16px;padding-right:64px}
+#mcx .blog-row::-webkit-scrollbar{display:none}
+#mcx .post{flex:none;width:300px;scroll-snap-align:start}
+#mcx .post .pic{width:300px;height:300px;border-radius:10px;overflow:hidden;background:var(--blush)}
+#mcx .post .pic img{width:100%;height:100%;object-fit:cover}
+#mcx .post time{display:block;margin-top:14px;color:var(--mute);font-size:13px}
+#mcx .post h3{font-size:18px;margin:12px 0;line-height:1.45}
+#mcx .post p{color:var(--mute);font-size:15px;line-height:1.6;margin:0 0 18px}
+#mcx .post a.more{font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+#mcx .progress{height:4px;background:var(--line);margin-top:56px;border-radius:2px;overflow:hidden}
+#mcx .progress i{display:block;height:100%;width:30%;background:var(--wine);transition:width .2s}
+#mcx .news{padding:104px 16px 80px;text-align:center}
+#mcx .news p{color:var(--mute);margin:20px 0 40px}
+#mcx .news form{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+#mcx .news input{width:min(754px,100%);height:56px;border-radius:999px;border:0;background:var(--pink);padding:0 28px;font:inherit;font-size:14px}
+#mcx footer{background:var(--footer);padding:72px 0 40px}
+#mcx .foot{display:grid;grid-template-columns:420px repeat(3,1fr);gap:40px}
+#mcx .foot .about p{line-height:1.7;margin:30px 0}
+#mcx .soc{display:flex;gap:16px}
+#mcx .soc a{width:41px;height:32px;border-radius:9px;background:var(--ink);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center}
+#mcx .foot h4{margin:0 0 18px;font-size:16px}
+#mcx .foot ul{list-style:none;padding:0;margin:0;line-height:2;font-size:15px}
+#mcx .legal{margin-top:56px;font-size:12px;color:var(--mute);line-height:1.8}
+#mcx .help{position:fixed;right:24px;bottom:24px;width:52px;height:52px;border-radius:50%;background:var(--wine);color:#fff;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.2);z-index:60}
+#mcx .draft{position:fixed;left:16px;bottom:16px;z-index:60;background:#FFF4CC;color:#5C4A00;border:1px solid #E8C547;border-radius:8px;padding:8px 12px;font-size:12px;max-width:280px;line-height:1.5}
+@media(max-width:1100px){#mcx .hdr{grid-template-columns:40px 1fr auto;gap:12px;padding:0 16px;height:68px}
+#mcx .burger{display:block;grid-column:1;grid-row:1}
+#mcx .logo{grid-column:2;grid-row:1;justify-self:center}
+#mcx .logo img{height:38px}
+#mcx .tools{grid-column:3;grid-row:1;gap:14px}
+#mcx .nav{display:none}
+#mcx .mega{display:none!important}
+#mcx .nav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;height:auto;position:absolute;top:100%;left:0;right:0;background:#fff;padding:8px 20px 16px;box-shadow:0 10px 20px rgba(0,0,0,.08)}
+#mcx .nav.open>div{height:auto;border-bottom:1px solid var(--line)}
+#mcx .nav.open a{padding:14px 0;width:100%}
+#mcx .nav.open .chev{display:none}
+#mcx .hero{grid-template-columns:1fr}
+#mcx .hero-img img{height:360px}
+#mcx .hero-copy{padding:20px 16px 56px}
+#mcx .hang{display:none}
+#mcx .imgcard{grid-template-columns:1fr;padding:0 16px 56px}
+#mcx .imgcard .pic,#mcx .imgcard.short .pic{height:360px;margin-top:0}
+#mcx .imgcard .card,#mcx .imgcard.short .card{margin:-40px 16px 0}
+#mcx .need-grid{grid-template-columns:repeat(5,70%);overflow-x:auto;scroll-snap-type:x mandatory}
+#mcx .need-grid a{scroll-snap-align:start}
+#mcx .ba-grid{grid-template-columns:1fr;justify-items:center;gap:40px}
+#mcx .cmp{grid-template-columns:1fr;padding:60px 0}
+#mcx .cmp::before{left:-300px;top:-120px}
+#mcx .cmp-vis{padding:0}
+#mcx .cmp-copy{padding:40px 16px 0}
+#mcx .foot{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){#mcx .tools .cur,#mcx .tools .acct{display:none}
+#mcx .mega{display:none!important}
+#mcx .logos{gap:16px}
+#mcx .pcard,#mcx .pimg{width:78vw}
+#mcx .pimg{height:78vw}
+#mcx .trust{grid-template-columns:1fr 1fr;row-gap:36px;padding-top:40px;padding-bottom:40px}
+#mcx .trust .blob{width:66px;height:66px}
+#mcx .trust b{font-size:15px}
+#mcx .compare{width:min(400px,92vw);height:min(400px,92vw)}
+#mcx .vt{width:70vw}
+#mcx .vtest .side-arrow{display:none}
+#mcx .cmp-vis{gap:12px}
+#mcx .cmp-vis figure{width:150px}
+#mcx .foot{grid-template-columns:1fr}
+#mcx .draft{display:none}}
+#mcx .rv{opacity:0;transform:translate3d(0,24px,0);transition:opacity .6s ease,transform .6s ease;transition-delay:var(--d,0s)}
+#mcx .rv.in{opacity:1;transform:translate3d(0,0,0)}
+#mcx .zo img{transform:scale(1.2);transition:transform .6s ease}
+#mcx .zo.in img{transform:scale(1)}
+#mcx .pimg img,#mcx .post .pic img{transition:transform .3s ease}
+#mcx .pimg:hover img,#mcx .post:hover .pic img{transform:scale3d(1.1,1.1,1)}
+#mcx .need-grid a:hover img{transform:scale(1.1)}
+#mcx .post .pic{overflow:hidden}
+#mcx .shine{position:relative;overflow:hidden}
+#mcx .shine::after{content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:mcx-shine 2.8s ease-in-out infinite;pointer-events:none}
+@keyframes mcx-shine{0%{left:-80%}55%,100%{left:140%}}
+@keyframes mcx-sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1.5deg)}}
+#mcx .hero-img img{animation:mcx-sway 7s ease-in-out infinite;transform-origin:50% 85%}
+#mcx .vt{cursor:pointer}
+#mcx .vt video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+#mcx .vt::before{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.55));z-index:1;pointer-events:none}
+#mcx .vt .play,#mcx .vt .who{z-index:2}
+#mcx .vmodal{position:fixed;inset:0;z-index:300;background:rgba(25,10,15,.85);display:none;align-items:center;justify-content:center;padding:24px}
+#mcx .vmodal.open{display:flex;animation:mcx-vmIn .3s ease}
+@keyframes mcx-vmIn{from{opacity:0}to{opacity:1}}
+#mcx .vm-box{display:flex;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:mcx-vmUp .35s ease}
+@keyframes mcx-vmUp{from{transform:translateY(30px) scale(.97)}to{transform:none}}
+#mcx .vm-player{position:relative;height:min(86vh,760px);aspect-ratio:9/16;background:#000}
+#mcx .vm-player video{width:100%;height:100%;object-fit:contain;display:block;cursor:pointer}
+#mcx .vm-prog{position:absolute;top:12px;left:12px;right:12px;height:3px;background:rgba(255,255,255,.35);border-radius:2px;z-index:2}
+#mcx .vm-prog i{display:block;height:100%;width:0;background:#fff;border-radius:2px}
+#mcx .vm-mute{position:absolute;right:12px;top:26px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:16px;z-index:2}
+#mcx .vm-side{width:340px;padding:40px 28px 28px;display:flex;flex-direction:column;gap:12px;overflow:auto}
+#mcx .vm-side img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--blush);border-radius:10px}
+#mcx .vm-side h3{margin:8px 0 0;font-size:18px}
+#mcx .vm-side .pr{color:var(--wine);font-weight:700;font-size:18px}
+#mcx .vm-side .cap{color:var(--mute);font-size:14px;line-height:1.7;margin:0}
+#mcx .vm-side .btn{width:100%;margin-top:auto}
+#mcx .vm-side .ig{font-size:13px;color:var(--wine);text-align:center}
+#mcx .vm-x{position:fixed;top:16px;right:20px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:26px;line-height:44px;padding:0}
+#mcx .vm-nav{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:28px;padding:0}
+#mcx .vm-nav.p{left:20px}
+#mcx .vm-nav.n{right:20px}
+#mcx .vm-mbuy{display:none}
+#mcx .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);background:var(--wine);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;opacity:0;transition:all .3s;z-index:400;pointer-events:none}
+#mcx .toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){#mcx .vm-side{display:none}
+#mcx .vm-box{border-radius:12px}
+#mcx .vm-player{height:auto;width:min(92vw,420px)}
+#mcx .vm-mbuy{display:flex;position:absolute;left:12px;right:12px;bottom:14px;z-index:2;background:#fff;border-radius:10px;padding:8px 10px;align-items:center;gap:10px;font-size:13px}
+#mcx .vm-mbuy img{width:40px;height:40px;object-fit:contain;background:var(--blush);border-radius:6px}
+#mcx .vm-mbuy div{flex:1}
+#mcx .vm-mbuy button{border:0;background:var(--wine);color:#fff;border-radius:999px;padding:8px 14px;font-size:13px}
+#mcx .vm-nav{display:none}}
+@media(prefers-reduced-motion:reduce){#mcx .rv{opacity:1;transform:none;transition:none}
+#mcx .zo img{transform:none}
+#mcx .hero-img img,#mcx .shine::after{animation:none}}
+#mcx .promise-sub{color:var(--mute);margin:14px 0 0;font-size:16px}
+#mcx .promise-row{margin-top:52px}
+#mcx .promise-row>div{width:170px;gap:0}
+#mcx .promise-row b{display:block;margin-top:18px;font-size:16.5px;font-weight:700;letter-spacing:.04em;color:var(--ink)}
+#mcx .promise-row small{display:block;margin-top:8px;font-size:13px;line-height:1.6;color:var(--mute)}
+@media(max-width:1100px){#mcx .promise-row{display:grid;grid-template-columns:1fr 1fr;gap:36px 16px}
+#mcx .promise-row>div{width:auto}}
+#mcx .line-btn{gap:10px}
+#mcx .founder{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px;max-width:1440px;margin:0 auto;padding:40px 40px 40px 64px}
+#mcx .f-copy{max-width:560px}
+#mcx .f-eb{display:block;font-size:13px;letter-spacing:.3em;color:var(--gold);margin-bottom:22px}
+#mcx .f-title{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:clamp(30px,3.6vw,52px);line-height:1.3;letter-spacing:.04em;margin:0 0 28px}
+#mcx .f-title em{white-space:nowrap;font-style:normal;font-weight:400;color:var(--wine)}
+#mcx .f-copy p{font-size:17px;line-height:1.9;margin:0 0 26px;color:#3a3a3a}
+#mcx .f-copy blockquote{margin:0 0 18px;padding-left:18px;border-left:2px solid var(--gold);font-family:var(--serif);font-size:19px;line-height:1.7;color:var(--wine)}
+#mcx .f-sign{display:block;font-size:14px;color:var(--mute);letter-spacing:.08em;margin-bottom:34px}
+#mcx .founder .btn{height:52px;padding:0 30px;border-radius:6px;letter-spacing:.12em}
+#mcx .f-pic{border-radius:16px;overflow:hidden;aspect-ratio:4/5;max-height:760px;background:#F1EFEC}
+#mcx .f-pic img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform .8s ease}
+#mcx .f-pic:hover img{transform:scale(1.03)}
+@media(max-width:1100px){#mcx .founder{grid-template-columns:1fr;gap:32px;padding:24px 16px}
+#mcx .f-pic{order:-1;aspect-ratio:4/5}}
+#mcx .tag-todo{color:#9A6A2E;background:rgba(201,168,106,.10);border:1px dashed rgba(201,168,106,.75);border-radius:6px;padding:0 6px}
+#mcx time.tag-todo,#mcx small.tag-todo{display:inline-block}
+#mcx li.tag-todo{display:table;margin:3px 0}
+#mcx .ba .eyebrow.tag-todo{display:table;margin:0 auto}
+#mcx .need-grid small{display:table!important;margin:8px auto 0!important}
+#mcx .compare .before{padding-right:50%}
+#mcx .compare .after{padding-left:50%}
+#mcx p.tag-todo{display:table}
+@media(min-width:900px){#mcx .quiz.wrap{padding-left:64px;padding-right:64px}}
+#mcx .cmp-copy li.tag-todo{display:list-item;margin:4px 0}
+#mcx .hero{background:radial-gradient(circle at 24% 52%,rgba(251,233,228,.20),transparent 38%),radial-gradient(circle at 92% 10%,rgba(201,168,106,.16),transparent 30%),linear-gradient(100deg,var(--wine-dark) 0%,#55202F 45%,var(--wine-2) 100%)}
+#mcx .hero::after{content:"";position:absolute;right:-180px;bottom:-260px;width:620px;height:620px;border-radius:50%;border:1px solid rgba(255,255,255,.12);pointer-events:none}
+#mcx .hero::before{content:"";position:absolute;left:70px;top:50%;width:470px;height:470px;transform:translateY(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,240,236,.16),transparent 66%);pointer-events:none}
+#mcx .hero-img img{position:relative;filter:drop-shadow(0 30px 40px rgba(20,4,10,.45))}
+#mcx .hero-eb{display:block;font-size:12px;letter-spacing:.38em;color:var(--gold);margin-bottom:18px}
+#mcx .hero .btn.gold{color:#3E1823;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+#mcx .hero .btn.ghost-w:hover{background:rgba(255,255,255,.1)}
+#mcx .strip{padding:0;height:64px;display:flex;align-items:center;overflow:hidden;background:var(--cream);border-top:1px solid #F3E1DC;border-bottom:1px solid #F3E1DC}
+#mcx .strip-track{display:flex;align-items:center;width:max-content;animation:mcx-mq 42s linear infinite}
+#mcx .strip-track span{font-family:var(--serif);font-size:20px;color:var(--wine);letter-spacing:.12em;white-space:nowrap}
+#mcx .strip-track i{font-style:normal;color:var(--gold);font-size:14px;margin:0 34px}
+@media(min-width:1100px){#mcx .slider{padding-right:0;overflow:visible}
+#mcx .pcard{width:calc((100% - 60px)/3)}
+#mcx .pimg{width:100%;height:auto;aspect-ratio:1/1}
+#mcx .products .dots{display:none}}
+#mcx .pcard{transition:transform .35s;cursor:pointer}
+#mcx .pcard:hover{transform:translateY(-4px)}
+#mcx .pcard h3{font-size:18px}
+#mcx .quiz{padding-top:24px;padding-bottom:64px}
+#mcx .quiz-in{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(120deg,#FBEDE9,#F6E4E6);padding:64px 24px;text-align:center}
+#mcx .quiz-in>*{position:relative}
+#mcx .quiz-eb{display:inline-block;font-size:13px;letter-spacing:.14em;color:var(--wine);background:#fff;border-radius:999px;padding:6px 16px;margin-bottom:18px}
+#mcx .qdeco{position:absolute!important;border-radius:50%;pointer-events:none}
+#mcx .qdeco.d1{width:260px;height:260px;left:-80px;bottom:-120px;background:rgba(90,40,53,.06)}
+#mcx .qdeco.d2{width:160px;height:160px;right:6%;top:-60px;border:1px solid rgba(90,40,53,.15)}
+#mcx .imgcard:not(.short){align-items:center}
+#mcx .imgcard:not(.short) .pic{height:560px}
+#mcx .imgcard:not(.short) .card{margin-top:0;align-self:center;box-shadow:0 18px 40px rgba(90,40,53,.08)}
+#mcx .imgcard.short .card{box-shadow:0 18px 40px rgba(90,40,53,.06)}
+#mcx .need-grid span{font-size:18px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+#mcx .need-grid small{display:inline-block;margin-top:8px;padding:3px 12px;border-radius:999px;background:#fff;font-size:12.5px}
+#mcx .need-grid .pic{box-shadow:0 10px 24px rgba(90,40,53,.08)}
+#mcx .compare{border-radius:16px;box-shadow:0 10px 26px rgba(90,40,53,.08)}
+#mcx .compare .side{flex-direction:column;gap:10px;color:#A48F8B}
+#mcx .compare .side em{font-style:normal;font-size:13px;letter-spacing:.06em}
+#mcx .compare .before{background:#E9DEDB}
+#mcx .compare .after{background:#F7EFED}
+#mcx .compare .lb{position:absolute;top:14px;font-size:11px;letter-spacing:.2em;font-weight:700;background:rgba(255,255,255,.85);color:var(--wine);padding:4px 10px;border-radius:999px}
+#mcx .compare .before .lb{left:14px}
+#mcx .compare .after .lb{right:14px}
+#mcx .compare .knob{width:44px;height:44px}
+#mcx .cmp-vis .p2{border:1.5px dashed #D9C3BE;background:rgba(255,255,255,.7)}
+#mcx .promise-row{gap:40px}
+#mcx .promise-row>div{display:flex;flex-direction:column;align-items:center;gap:18px;width:150px}
+#mcx .promise .blob{width:78px;height:78px;display:flex;align-items:center;justify-content:center;background:#F6E4E6;transition:transform .5s cubic-bezier(.22,.8,.24,1),border-radius .8s ease}
+#mcx .promise .b1{border-radius:46% 54% 42% 58%/55% 45% 55% 45%}
+#mcx .promise .b2{border-radius:58% 42% 52% 48%/44% 56% 44% 56%}
+#mcx .promise .b3{border-radius:42% 58% 55% 45%/52% 42% 58% 48%}
+#mcx .promise .b4{border-radius:52% 48% 44% 56%/58% 46% 54% 42%}
+#mcx .promise-row>div:hover .blob{transform:translateY(-4px) rotate(-6deg);border-radius:50%}
+#mcx .promise svg{width:40px;height:40px}
+#mcx .post{transition:transform .35s}
+#mcx .post h3{transition:color .2s}
+#mcx .post:hover h3{color:var(--wine)}
+#mcx .news{background:linear-gradient(180deg,#fff,var(--cream))}
+#mcx .nl{display:flex;align-items:center;width:min(640px,100%);margin:0 auto;background:#fff;border:1.5px solid #EAD6D2;border-radius:999px;padding:6px;box-shadow:0 10px 30px rgba(90,40,53,.07);transition:border-color .2s}
+#mcx .nl:focus-within{border-color:var(--wine)}
+#mcx .news .nl input{flex:1;width:auto;height:48px;background:none;padding:0 22px;outline:0}
+#mcx .nl .btn{height:48px;padding:0 30px;flex:none}
+#mcx .nl-note{display:block;margin-top:16px;color:var(--mute);font-size:12.5px}
+#mcx .soc a{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--wine);border:1px solid #EAD6D2;transition:background .2s,color .2s,transform .2s}
+#mcx .soc a:hover{background:var(--wine);color:#fff;transform:translateY(-2px)}
+#mcx .foot ul li{transition:color .2s;cursor:pointer}
+#mcx .foot ul li:hover{color:var(--wine)}
+#mcx .badge-ph{width:96px;height:96px;border-radius:50%;margin-top:24px;border:1.5px dashed #D9C3BE;color:var(--mute);font-size:12px;display:flex;align-items:center;justify-content:center}
+@media(max-width:1100px){#mcx .hero::before{left:50%;top:30%;transform:translate(-50%,-50%);width:360px;height:360px}
+#mcx .hero::after{display:none}
+#mcx .imgcard:not(.short) .pic{height:420px}
+#mcx .imgcard:not(.short) .card{margin:-60px 16px 0}
+#mcx .strip{height:54px}
+#mcx .strip-track span{font-size:17px}
+#mcx .strip-track i{margin:0 22px}
+#mcx .quiz-in{padding:48px 20px}
+#mcx .nl .btn{padding:0 22px}}
+@media(prefers-reduced-motion:reduce){#mcx .strip-track{animation:none}}</style>
+<div id="mcx" data-page="home">
+<!-- 00 公告列 -->
+<div class="ann" id="ann">
+  <button class="prev" aria-label="上一則">‹</button>
+  <div class="ann-msg on">預購開跑｜美妍水光飲每盒 NT$1,680，預計 11 月陸續出貨</div>
+  <div class="ann-msg">新竹物流宅配 NT$80，7-ELEVEN 取貨不付款 NT$65</div>
+  <button class="next" aria-label="下一則">›</button>
+</div>
+<!-- 01 Header -->
+<header class="site">
+  <div class="hdr">
+    <a class="logo" href="/"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6aa909f467c0d23176a93de6/1200x.webp?source_format=png" alt="Moocella 沐菈"></a>
+    <button class="burger" aria-label="選單" onclick="document.querySelector('.nav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="has-mega"><a href="/pages/moocella-shop">全部商品<i class="chev"></i></a></div>
+      <div class="has-mega"><a href="#need">營養專家團隊<i class="chev"></i></a></div>
+      <div><a href="#how">怎麼喝</a></div>
+      <div><a href="#vtest">沐菈日常</a></div>
+      <div><a href="#products">關於原料</a></div>
+      <div><a href="#consult">客服諮詢</a></div>
+    </nav>
+    <div class="tools">
+      <span class="cur">TW｜NT$</span>
+      <a href="/products" title="搜尋" aria-label="搜尋"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></a>
+      <a class="acct" href="/users/sign_in" title="會員" aria-label="會員"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4 20.5c1.2-4 4.4-6 8-6s6.8 2 8 6"/></svg></a>
+      <a class="cart" href="/cart" title="購物車" aria-label="購物車"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg></a>
+    </div>
+  </div>
+  <div class="mega">
+    <div>
+      <h6>全部商品</h6>
+      <div class="mega-grid">
+        <a class="mega-item" href="/pages/moocella-shop?plan=1"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt=""></div><div><b>美妍水光飲｜1 盒</b><small>NT$1,680・另計運費</small><em>莓果風味</em></div></a>
+        <a class="mega-item" href="/pages/moocella-shop?plan=2"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd7ba5c999740e9c8054/1200x.webp?source_format=png" alt="" style="object-fit:cover"></div><div><b>美妍水光飲｜2 盒</b><small>NT$3,360・免運</small><em>莓果風味</em></div></a>
+        <a class="mega-item" href="/pages/moocella-shop?plan=10"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt=""></div><div><b>美妍水光飲｜10 盒組</b><small>NT$15,120・9 折</small><em>莓果風味</em></div></a>
+      </div>
+    </div>
+    <div>
+      <h6>營養專家團隊</h6>
+      <ul><li>唐櫻翠 醫師</li><li>創辦人 Ariel</li><li>簡子勻 營養師</li><li>錢靜蓉 營養師</li><li>郝珮君 營養師</li></ul>
+    </div>
+  </div>
+</header>
+<!-- 02 Hero -->
+<section class="hero">
+  <div class="hero-img"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt="Moocella 美妍水光飲罐裝與單包"></div>
+  <div class="hero-copy">
+    <span class="hero-eb">BEAUTY STARTS WITH YOU</span>
+    <h1>一天一包<br>給忙碌女生的養顏美容</h1>
+    <p>鮭魚精巢萃取、膠原蛋白、玻尿酸、後生元<br>每盒 10 包 NT$1,680，預計 11 月陸續出貨</p>
+    <div class="btns"><a class="btn gold" href="/pages/moocella-shop">立即預購</a><a class="btn ghost-w" href="#products">認識四大原料</a></div>
+  </div>
+  <div class="hang"><span class="b">MOOCELLA</span><span class="big">預購</span><small style="margin-top:8px">11 月出貨</small></div>
+</section>
+<!-- 03 媒體 logo -->
+<section class="logos">
+  <span class="lbl">服務品牌</span>
+  <div class="marquee"><div class="track">
+    <img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-01.png" alt="裕民航運"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-02.png" alt="樂坡 BON BOX"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-03.png" alt="InBody Taiwan"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-04.png" alt="Metagenics"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-05.png" alt="H2U"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-06.png" alt="DBS 星展銀行"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-07.png" alt="TSC 建越科技"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-08.png" alt="給力盒子"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-09.png" alt="ACCUNIQ"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-10.png" alt="Dr. Nutri 芯漾生醫"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-11.png" alt="ZionCare"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-12.png" alt="上海商業儲蓄銀行"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-13.png" alt="palsys"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-14.png" alt="合作品牌"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-15.png" alt="BHK's"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-16.png" alt="RACE ON 銳速運動醫學"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-17.png" alt="MamiGuide"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-18.png" alt="富蘭克林華美投信"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-19.png" alt="JTI"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-20.png" alt="BEYOND FITNESS"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-21.png" alt="Ruijia"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-22.png" alt="森下仁丹"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-23.png" alt="晶英產後護理之家"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-24.png" alt="合作品牌"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-25.png" alt="medein"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-26.png" alt="成吉思汗健身俱樂部"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-27.png" alt="EinFit"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-28.png" alt="NAKED PROTEIN"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-29.png" alt="安健維康物理治療"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-30.png" alt="PBF 寶齡富錦"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-31.png" alt="合作品牌"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-32.png" alt="BE YOUR FITNESS"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-33.png" alt="GenMont 景岳生技"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-34.png" alt="NORDIC NATURALS"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-35.png" alt="維力骨科診所"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-36.png" alt="一中心有限公司">
+    <img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-01.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-02.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-03.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-04.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-05.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-06.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-07.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-08.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-09.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-10.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-11.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-12.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-13.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-14.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-15.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-16.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-17.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-18.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-19.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-20.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-21.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-22.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-23.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-24.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-25.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-26.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-27.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-28.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-29.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-30.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-31.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-32.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-33.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-34.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-35.png" alt="" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/logos/brand-36.png" alt="" aria-hidden="true">
+  </div></div>
+</section>
+<!-- 04 短影片＋商品 -->
+<section class="vshop" id="how">
+  <h2 class="h2 center">看看大家怎麼喝 Moocella</h2>
+  <div class="vviewport" id="vviewport"><div class="vtrack" id="vtrack"></div></div>
+  <div class="arrows"><button id="vprev" aria-label="上一支">←</button><button id="vnext" aria-label="下一支">→</button></div>
+</section>
+<!-- 05 品牌一句話 -->
+<div class="strip" aria-label="每天一包，撕開就喝的美妍飲。鮭魚精巢萃取、膠原蛋白、玻尿酸、後生元，四大核心一次補給。"><div class="strip-track"><span>鮭魚精巢萃取</span><i>✦</i><span>膠原蛋白</span><i>✦</i><span>玻尿酸</span><i>✦</i><span>後生元</span><i>✦</i><span>每天一包，撕開就喝</span><i>✦</i><span>鮭魚精巢萃取</span><i>✦</i><span>膠原蛋白</span><i>✦</i><span>玻尿酸</span><i>✦</i><span>後生元</span><i>✦</i><span>每天一包，撕開就喝</span><i>✦</i><span>鮭魚精巢萃取</span><i>✦</i><span>膠原蛋白</span><i>✦</i><span>玻尿酸</span><i>✦</i><span>後生元</span><i>✦</i><span>每天一包，撕開就喝</span><i>✦</i><span>鮭魚精巢萃取</span><i>✦</i><span>膠原蛋白</span><i>✦</i><span>玻尿酸</span><i>✦</i><span>後生元</span><i>✦</i><span>每天一包，撕開就喝</span><i>✦</i></div></div>
+<!-- 06 商品 -->
+<section class="products wrap" id="products">
+  <h2 class="h2">探索我們的商品</h2>
+  <div class="slider" id="pslider">
+    <article class="pcard" onclick="location.href='/pages/moocella-shop?plan=1'">
+      <div class="pimg"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt="Moocella 美妍水光飲 1 盒"><span class="corner">單盒<br>體驗</span></div>
+      <h3>Moocella 美妍水光飲｜1 盒（10 包）</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price"><b>NT$1,680</b><s>NT$2,980</s><span class="pill">+ 運費</span></div>
+      <p>20 mL × 10 包，先喝一盒試試看。鮭魚精巢萃取、海之嬌膠原蛋白、L-137 後生元、日本 Kewpie 玻尿酸，莓果風味。</p>
+    </article>
+    <article class="pcard" onclick="location.href='/pages/moocella-shop?plan=2'">
+      <div class="pimg"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd7ba5c999740e9c8054/1200x.webp?source_format=png" alt="Moocella 美妍水光飲 2 盒" style="object-fit:cover"><span class="corner">2 盒<br>免運</span></div>
+      <h3>Moocella 美妍水光飲｜2 盒（20 包）</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price"><b>NT$3,360</b><s>NT$5,960</s><span class="pill">免運</span></div>
+      <p>兩盒一起買直接免運，自己喝或分給姐妹都剛好。</p>
+    </article>
+    <article class="pcard" onclick="location.href='/pages/moocella-shop?plan=10'">
+      <div class="pimg"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt="Moocella 美妍水光飲 10 盒組"><span class="corner">10 盒<br>9 折</span></div>
+      <h3>Moocella 美妍水光飲｜10 盒組（100 包）</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price"><b>NT$15,120</b><s>NT$29,800</s><span class="pill">9 折</span></div>
+      <p>一次囤 10 盒享 9 折，平均每盒 NT$1,512，天天喝最划算。</p>
+    </article>
+  </div>
+  <div class="dots" id="pdots"><i class="on"></i><i></i><i></i></div>
+</section>
+<!-- 07 客服諮詢（原選品測驗） -->
+<section class="quiz wrap" id="consult">
+  <div class="quiz-in">
+    <span class="qdeco d1"></span><span class="qdeco d2"></span>
+    <span class="quiz-eb">官方 LINE 客服</span>
+    <h2 class="h2">不確定適不適合妳、<br>或是有什麼個人疑問嗎？</h2>
+    <p>都歡迎聯繫我們的客服諮詢。</p>
+    <a class="btn shine line-btn" href="https://lin.ee/p22IPUQ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.1.7.2.8.5.1.2 0 .6 0 .9l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.3-5.4c1.3-1.4 1.9-2.9 1.9-4.4 0-4-4-7.2-9.2-7.2z"/></svg>聯繫 LINE 客服</a>
+  </div>
+</section>
+<!-- 08 圖文：送禮 -->
+<section class="imgcard wrap">
+  <div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd7ba5c999740e9c8054/1200x.webp?source_format=png" alt="Moocella 美妍水光飲包裝"></div>
+  <div class="card">
+    <h2 class="h2">年末送禮，<br>送一份好好照顧自己</h2>
+    <p>一盒 10 包、每天一包，撕開就能喝。送給忙碌的她，也記得為自己留一份。</p>
+    <a class="btn" href="/pages/moocella-shop?plan=2">選購 2 盒免運</a>
+  </div>
+</section>
+<!-- 09 營養專家團隊 -->
+<section class="need" id="need">
+  <div class="wrap">
+    <h2 class="h2 center">營養專家團隊</h2>
+    <div class="need-grid">
+      <a href="#"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6d2e9469d9a35c007d63b/1200x.webp?source_format=png" alt=""></div><span>簡子勻<small>營養師</small></span></a>
+      <a href="#"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd82f05c06499d3d0303/1200x.webp?source_format=png" alt=""></div><span>唐櫻翠 醫師<small>品牌代言人</small></span></a>
+      <a href="#"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd78bd02000cae50d1f2/1200x.webp?source_format=png" alt=""></div><span>Ariel<small>創辦人</small></span></a>
+      <a href="#"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6d2ecc31b81c5650fda14/1200x.webp?source_format=png" alt=""></div><span>錢靜蓉<small>營養師</small></span></a>
+      <a href="#"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6d2e699952a1287a310f5/1200x.webp?source_format=png" alt=""></div><span>郝珮君<small>營養師</small></span></a>
+    </div>
+  </div>
+</section>
+<!-- 10 信任點 -->
+<section class="trust wrap">
+  <div><span class="blob b1"><svg viewBox="0 0 40 40" stroke="#5A2835" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="8" width="18" height="25" rx="2.5"/><path d="M16 8V6.5h8V8"/><path d="M15.5 21l3 3 6-6.5"/><path d="M15 29h10"/></svg></span><b>成分公開透明</b></div>
+  <div><span class="blob b2"><svg viewBox="0 0 40 40" stroke="#5A2835" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 33V18"/><path d="M20 23c-.8-6.5-4.8-9.5-11-9.5 0 6.2 4 10 11 9.5z"/><path d="M20 19c.8-6.5 4.8-9.5 11-9.5 0 6.2-4 10-11 9.5z"/><path d="M14 33h12"/></svg></span><b>日本嚴選原料</b></div>
+  <div><span class="blob b3"><svg viewBox="0 0 40 40" stroke="#5A2835" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="21" r="11"/><path d="M20 14v7l4.5 3"/><path d="M17 7h6"/><path d="M29.5 10.5l1.8-1.8"/></svg></span><b>每天 8 秒輕鬆喝</b></div>
+  <div><span class="blob b4"><svg viewBox="0 0 40 40" stroke="#5A2835" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6l11 4v8.5c0 7-4.6 12.6-11 15.5C13.6 31.1 9 25.5 9 18.5V10z"/><text x="20" y="23.5" text-anchor="middle" font-size="7.5" font-family="Arial,sans-serif" font-weight="700" fill="#5A2835" stroke="none" letter-spacing=".5">MIT</text></svg></span><b>台灣製造安心</b></div>
+</section>
+<!-- 12 影片見證 -->
+<section class="vtest" id="vtest">
+  <h2 class="h2 center">看看沐菈的日常</h2>
+  <div class="row" id="vrow"></div>
+  <button class="side-arrow l" onclick="document.getElementById('vrow').scrollBy({left:-340,behavior:'smooth'})">‹</button>
+  <button class="side-arrow r" onclick="document.getElementById('vrow').scrollBy({left:340,behavior:'smooth'})">›</button>
+</section>
+<!-- 13 訂閱 -->
+<section class="imgcard short wrap">
+  <div class="pic" style="background:var(--blush)"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt="" style="object-fit:contain"></div>
+  <div class="card">
+    <span class="f-eb" style="margin-bottom:14px">2 盒免運</span>
+    <h2 class="h2">兩盒一起買，最划算</h2>
+    <p style="margin:16px 0 0">一盒 10 包喝 10 天，兩盒剛好喝滿 20 天。單買一盒運費另計，兩盒直接免運。</p>
+    <ul><li>2 盒 20 包 NT$3,360，免運送到家</li><li>不用一盒喝完再下單，連續喝更方便</li><li>一盒自己喝、一盒分給姐妹也剛好</li></ul>
+    <a class="btn shine" href="/pages/moocella-shop?plan=2">選購 2 盒免運</a>
+  </div>
+</section>
+<!-- 15 承諾 -->
+<section class="promise wrap">
+  <h2 class="h2">我們的承諾</h2>
+  <p class="promise-sub">一包裡放的，都是看得懂的東西。</p>
+  <div class="promise-row">
+    <div><span class="blob b1"><svg viewBox="0 0 40 40" fill="none" stroke="#5A2835" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="12"/><path d="M11.5 28.5l17-17"/></svg></span><b>不添加色素</b><small>粉紅色來自七種莓果原汁</small></div>
+    <div><span class="blob b2"><svg viewBox="0 0 40 40" fill="none" stroke="#5A2835" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="12"/><path d="M11.5 28.5l17-17"/></svg></span><b>不添加防腐劑</b><small>未開封室溫可保存 2 年</small></div>
+    <div><span class="blob b3"><svg viewBox="0 0 40 40" fill="none" stroke="#5A2835" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="12"/><path d="M11.5 28.5l17-17"/></svg></span><b>不額外添加蔗糖</b><small>甜味來自水果與麥芽糖醇</small></div>
+    <div><span class="blob b4"><svg viewBox="0 0 40 40" fill="none" stroke="#5A2835" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="23" r="6.5"/><circle cx="25" cy="21" r="5.5"/><path d="M19 15c0-3 2-5 5-6M19 15c-2-2-5-2.5-7-1.5"/></svg></span><b>莓果原汁調味</b><small>蔓越莓、草莓、覆盆莓、櫻桃等</small></div>
+    <div><span class="blob b1"><svg viewBox="0 0 40 40" fill="none" stroke="#5A2835" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 31s-10-6.2-10-13.2A5.6 5.6 0 0 1 20 14.5a5.6 5.6 0 0 1 10 3.3C30 24.8 20 31 20 31z"/><path d="M16 20.5h8M20 16.5v8"/></svg></span><b>營養師參與製作</b><small>白白營養師（簡子勻）一起把關</small></div>
+    <div><span class="blob b2"><svg viewBox="0 0 40 40" fill="none" stroke="#5A2835" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l11 4v8c0 7-4.6 12.3-11 15-6.4-2.7-11-8-11-15v-8z"/><path d="M15.5 20.5l3.2 3.2 6-6.5"/></svg></span><b>產品責任險承保</b><small>新安東京海上產物保險</small></div>
+  </div>
+</section>
+<!-- 15b 創辦人故事 -->
+<section class="founder" id="story">
+  <div class="f-copy">
+    <span class="f-eb">創辦人的故事</span>
+    <h2 class="f-title">再忙，<br><em>也別忘了照顧自己。</em></h2>
+    <p>來自香港的 Ariel，在台灣求學、成家。工作、家庭和自己的生活，讓她開始思考：在照顧重要的人時，如何也記得照顧自己？</p>
+    <blockquote>照顧自己，不應該是一件有空才做的事。</blockquote>
+    <span class="f-sign">Moocella 創辦人 Ariel</span>
+    <a class="btn" href="https://www.moocella.com/about">品牌故事</a>
+  </div>
+  <div class="f-pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6ae851938a18e9000e5ecbb7/1200x.webp?source_format=png" alt="Moocella 創辦人 Ariel"></div>
+</section>
+<!-- 16 文章 -->
+<section class="blog wrap" id="journal">
+  <h2 class="h2">沐菈日常</h2>
+  <div class="blog-row" id="brow">
+    <article class="post"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6d2dbaaf64ba2a5e01b0e/1200x.webp?source_format=png" alt=""></div><h3>第一次認識美妍水光飲</h3><p>盒數、包數與食用方式，第一次喝之前先看這篇。</p><a class="more" href="/pages/first-drink">閱讀更多</a></article>
+    <article class="post"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd7ba5c999740e9c8054/1200x.webp?source_format=png" alt=""></div><h3>一盒 10 包，怎麼訂購？</h3><p>單盒價格、購買數量與預購出貨時間，一次說清楚。</p><a class="more" href="https://www.moocella.com/pages/choose-boxes">閱讀更多</a></article>
+    <article class="post"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6d2dea1f1fc90ddb771bf/1200x.webp?source_format=png" alt=""></div><h3>一包的食用與保存筆記</h3><p>從開封到日常收納，怎麼喝、怎麼放最方便。</p><a class="more" href="/pages/storage">閱讀更多</a></article>
+    <article class="post"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd78bd02000cae50d1f2/1200x.webp?source_format=png" alt=""></div><h3>照顧自己，不該是有空才做的事</h3><p>身為女性，我們好像總有很多事情要顧。工作、家庭、身邊的人⋯⋯</p><a class="more" href="/about">閱讀更多</a></article>
+    <article class="post"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6d2e1f05c06bcb13ce98e/1200x.webp?source_format=png" alt=""></div><h3>也記得，為自己留一份。</h3><p>選一份適合自己的安排，從認識沐菈美妍水光飲開始。</p><a class="more" href="/about">閱讀更多</a></article>
+  </div>
+  <div class="progress"><i id="bbar"></i></div>
+</section>
+<!-- 18 Footer -->
+<footer>
+  <div class="wrap foot">
+    <div class="about">
+      <img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6aa909f467c0d23176a93de6/1200x.webp?source_format=png" alt="Moocella" style="height:58px;width:auto">
+      <p>撕開就喝的美妍飲，把照顧自己放進每天的日常。好好照顧自己，是一種實力。</p>
+      <b style="font-size:14px">追蹤我們</b>
+      <div class="soc" style="margin-top:14px"><a href="https://www.facebook.com/profile.php?id=61594309412572" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21z"/></svg></a><a href="https://www.instagram.com/moocellatw/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.com/@moocellatw" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M16.5 11.2c-.4-2.6-2-3.9-4.4-3.9-2.6 0-4.3 1.9-4.3 4.7 0 3 1.8 4.9 4.6 4.9 2.3 0 3.9-1.3 3.9-3.1 0-1.8-1.6-2.7-3.6-2.7-1.6 0-2.7.7-2.7 1.8 0 1 .9 1.6 2 1.6 2 0 3.1-1.6 3.1-4.4M12 21c-5 0-8.5-3.6-8.5-9S7 3 12 3c4 0 6.9 2.1 8 5.6"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.1.7.2.8.5.1.2 0 .6 0 .9l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.3-5.4c1.3-1.4 1.9-2.9 1.9-4.4 0-4-4-7.2-9.2-7.2zM8.3 12.9H6.6c-.2 0-.4-.2-.4-.4V9c0-.2.2-.4.4-.4s.4.2.4.4v3.1h1.3c.2 0 .4.2.4.4s-.2.4-.4.4zm1.7-.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9c0-.2.2-.4.4-.4s.4.2.4.4zm4.2 0c0 .2-.1.3-.3.4h-.1c-.1 0-.3-.1-.3-.2l-1.8-2.4v2.2c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9c0-.2.1-.3.3-.4h.1c.1 0 .3.1.3.2l1.8 2.4V9c0-.2.2-.4.4-.4s.4.2.4.4zm2.8-2.2c.2 0 .4.2.4.4s-.2.4-.4.4h-1.3v.8H17c.2 0 .4.2.4.4s-.2.4-.4.4h-1.7c-.2 0-.4-.2-.4-.4V9c0-.2.2-.4.4-.4H17c.2 0 .4.2.4.4s-.2.4-.4.4h-1.3v.9z"/></svg></a></div>
+    </div>
+    <div><h4>商品</h4><ul><li><a href="/pages/moocella-shop">美妍水光飲</a></li></ul></div>
+    <div><h4>顧客服務</h4><ul><li><a href="/pages/faq">常見問題</a></li><li><a href="/about/delivery-policy">付款與配送</a></li><li><a href="/about/policy">退換貨政策</a></li><li><a href="/about/terms">條款與細則</a></li><li><a href="/about/privacy-policy">隱私政策</a></li></ul></div>
+    <div><h4>關於我們</h4><ul><li><a href="/about">品牌故事</a></li><li><a href="/pages/journal">沐菈日常</a></li><li><a href="/about/anti-fraud">防詐騙宣導</a></li><li><a href="https://lin.ee/p22IPUQ">聯絡我們</a></li></ul></div>
+  </div>
+  <div class="wrap legal">禾献股份有限公司｜統編 62152396｜02-25147751（週一至週五 10:00–17:00）｜moocellatw@gmail.com｜台北市松山區南京東路四段133巷9弄33號1樓</div>
+</footer>
+<div class="vmodal" id="vmodal" aria-hidden="true">
+  <button class="vm-x" aria-label="關閉">×</button>
+  <button class="vm-nav p" aria-label="上一支">‹</button><button class="vm-nav n" aria-label="下一支">›</button>
+  <div class="vm-box">
+    <div class="vm-player"><div class="vm-prog"><i></i></div><video id="vmv" playsinline></video><button class="vm-mute" aria-label="靜音切換">🔊</button>
+      <div class="vm-mbuy"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt=""><div>Moocella 美妍水光飲<br><b>NT$1,680</b></div><button class="js-add">加入購物車</button></div>
+    </div>
+    <aside class="vm-side">
+      <img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt="Moocella 美妍水光飲">
+      <h3>Moocella 美妍水光飲</h3><div class="pr">NT$1,680 <s style="color:var(--mute);font-size:.7em">NT$2,980</s></div>
+      <p class="cap" id="vmcap"></p>
+      <button class="btn shine js-add">加入購物車</button>
+      <a class="ig" href="https://www.instagram.com/moocellatw/" target="_blank" rel="noopener">到 IG 看更多沐菈影片 →</a>
+    </aside>
+  </div>
+</div>
+<div class="toast" id="toast">已加入購物車（草稿示意）</div>
+<a class="help" href="https://lin.ee/p22IPUQ" target="_blank" rel="noopener" title="LINE 客服">?</a>
+</div>
+<script>(function(){
+var MCX_BUY={"1": "https://www.moocella.com/cart?affiliate_ref_id=0fc66d42-76b9-49ed-a9ed-a2c0831eadf4&affiliate_source=express_link&sl-ref=", "2": "/products/moocella-beauty-drink-2", "10": "/products/moocella-beauty-drink-10"};var MCX_SHOP='/pages/moocella-shop';
+// 公告輪播
+(()=>{const m=[...document.querySelectorAll('.ann-msg')];let i=0;const show=n=>{m[i].classList.remove('on');i=(n+m.length)%m.length;m[i].classList.add('on')};
+document.querySelector('.ann .prev').onclick=()=>show(i-1);document.querySelector('.ann .next').onclick=()=>show(i+1);setInterval(()=>show(i+1),5000);})();
+// 影片資料（沐菈官方 IG 下載）
+const VS=[
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-s1-mom.mp4',t:'當媽媽已經夠累了，變漂亮這件事就簡單一點吧！每天一包、8 秒搞定。'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-s2-busy-mom.mp4',t:'每天忙工作、顧小孩就夠累了，保養不用複雜，簡單到每天都想喝。'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-s3-tasty.mp4',t:'酸酸甜甜像在喝果汁，好喝到不用設鬧鐘提醒自己。'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-s4-gift.mp4',t:'今年聖誕節，送她一盒 Moocella 美妍水光飲，每天喝一包就會想到你。'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-s5-bedazzle.mp4',t:'老闆叫我曝光新產品：用 MZ 世代最愛的閃閃貼紙！'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-s6-small-bag.mp4',t:'再小的包包，它都能塞得下。'}];
+const VA=[
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a1-six-months.mp4',t:'為了一包美妍飲，龜毛整整 6 個月'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a2-sampling.mp4',t:'從打樣開始，沒過我這關誰都別想上市'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a3-faq.mp4',t:'Moocella 的十萬個為什麼'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a4-founder.mp4',t:'從醫院到創業｜創辦人 Ariel'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a5-sisters.mp4',t:'跟姐妹出門，合照永遠拍不完'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a6-meme.mp4',t:'誰小時候沒這樣玩過？'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a7-movie.mp4',t:'一個人看電影，其實超自在'},
+ {f:'https://cdn.jsdelivr.net/gh/Jaycheng1103/moocella-assets@main/videos/mv-a8-partner.mp4',t:'合夥最怕的，不是虧錢'}];
+const toast=()=>{location.href=MCX_SHOP;return;const t=document.getElementById('toast');t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),1800)};
+// 影片播放視窗（點影片開啟，有聲音、進度條、商品與加入購物車）
+const VM=(()=>{const m=document.getElementById('vmodal'),v=document.getElementById('vmv'),bar=m.querySelector('.vm-prog i'),mu=m.querySelector('.vm-mute'),cap=document.getElementById('vmcap');let L=[],i=0;
+const load=()=>{v.src=L[i].f;cap.textContent=L[i].t;v.muted=false;mu.textContent='🔊';v.play().catch(()=>{v.muted=true;mu.textContent='🔇';v.play().catch(()=>{})})};
+const close=()=>{m.classList.remove('open');m.setAttribute('aria-hidden','true');v.pause();v.removeAttribute('src');v.load();document.body.style.overflow=''};
+v.ontimeupdate=()=>{bar.style.width=(v.currentTime/(v.duration||1)*100)+'%'};
+v.onended=()=>{i=(i+1)%L.length;load()};
+v.onclick=()=>v.paused?v.play():v.pause();
+mu.onclick=()=>{v.muted=!v.muted;mu.textContent=v.muted?'🔇':'🔊'};
+m.querySelector('.vm-x').onclick=close;m.onclick=e=>{if(e.target===m)close()};
+m.querySelector('.vm-nav.p').onclick=()=>{i=(i-1+L.length)%L.length;load()};m.querySelector('.vm-nav.n').onclick=()=>{i=(i+1)%L.length;load()};
+document.addEventListener('keydown',e=>{if(!m.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight'){i=(i+1)%L.length;load()}if(e.key==='ArrowLeft'){i=(i-1+L.length)%L.length;load()}});
+m.querySelectorAll('.js-add').forEach(b=>b.onclick=toast);
+return {open:(list,n)=>{L=list;i=n;m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';load()}};})();
+// 短影片＋商品輪播（同 Revive：整條平滑滑動、中間放大、無限循環、可拖曳）
+(()=>{const base='https://shoplineimg.com/6a0c197329b5de004d6571e5/';
+const vp=document.getElementById('vviewport'),tr=document.getElementById('vtrack');const N=VS.length,COPIES=5;let idx=N*2,wa,ws,gap;const cards=[];
+for(let r=0;r<COPIES;r++)VS.forEach((it,n)=>{const d=document.createElement('div');d.className='vcard';
+d.innerHTML=`<div class="vmedia"><video src="${it.f}" muted loop playsinline preload="metadata"></video><div class="vctl"><button class="vmute" aria-label="開關聲音">🔇</button><button class="vpause" aria-label="暫停">❚❚</button></div><div class="ptag"><div class="th"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt="" draggable="false"></div><div>Moocella 美妍水光飲<br><span>NT$1,680</span></div><button class="add shine" aria-label="加入購物車">+</button></div></div>`;
+const v=d.querySelector('video');const k=cards.length;
+d.querySelector('.add').onclick=e=>{e.stopPropagation();toast()};
+d.querySelector('.vmute').onclick=e=>{e.stopPropagation();v.muted=!v.muted;e.target.textContent=v.muted?'🔇':'🔊'};
+d.querySelector('.vpause').onclick=e=>{e.stopPropagation();v.paused?(v.play(),e.target.textContent='❚❚'):(v.pause(),e.target.textContent='▶')};
+d.onclick=()=>{if(moved){moved=false;return}if(k===idx){v.muted=true;d.querySelector('.vmute').textContent='🔇';VM.open(VS,n)}else go(k)};
+tr.appendChild(d);cards.push(d)});
+const pos=()=>vp.clientWidth/2-(idx*(ws+gap)+wa/2);
+function size(){const w=innerWidth;wa=w<760?Math.round(w*.62):310;ws=Math.round(wa*.774);gap=w<760?10:16;vp.style.setProperty('--wa',wa+'px');vp.style.setProperty('--ws',ws+'px');vp.style.setProperty('--gap',gap+'px')}
+function place(anim){if(!anim)tr.classList.add('nt');tr.style.transform=`translate3d(${pos()}px,0,0)`;
+cards.forEach((c,k)=>{c.classList.toggle('active',k===idx);const v=c.querySelector('video');
+if(Math.abs(k-idx)<=3){if(v.paused&&c.querySelector('.vpause').textContent!=='▶')v.play().catch(()=>{})}else if(!v.paused)v.pause();
+if(k!==idx&&!v.muted){v.muted=true;c.querySelector('.vmute').textContent='🔇'}});
+if(!anim){tr.offsetWidth;tr.classList.remove('nt')}}
+function go(k){idx=k;place(true)}
+tr.addEventListener('transitionend',e=>{if(e.target!==tr||e.propertyName!=='transform')return;
+if(idx<N*1.5||idx>=N*3.5){const old=cards[idx].querySelector('video');idx=N*2+((idx%N)+N)%N;const nv=cards[idx].querySelector('video');try{nv.currentTime=old.currentTime}catch(_){}place(false)}});
+document.getElementById('vprev').onclick=()=>go(idx-1);document.getElementById('vnext').onclick=()=>go(idx+1);
+// 拖曳／滑動
+let sx=null,dx=0,moved=false;
+vp.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;sx=e.clientX;dx=0;moved=false});
+addEventListener('pointermove',e=>{if(sx===null)return;dx=e.clientX-sx;if(Math.abs(dx)>6){moved=true;tr.classList.add('nt');tr.style.transform=`translate3d(${pos()+dx}px,0,0)`}});
+addEventListener('pointerup',()=>{if(sx===null)return;sx=null;if(!moved)return;tr.classList.remove('nt');const st=Math.round(-dx/(ws+gap));go(idx+(st||(dx<-40?1:dx>40?-1:0)));setTimeout(()=>moved=false,50)});
+addEventListener('resize',()=>{size();place(false)});
+size();place(false);})();
+// 沐菈日常影片（8 支，一排 4 張，捲到才播放）
+(()=>{const row=document.getElementById('vrow');if(!row)return;
+VA.forEach((it,n)=>{const d=document.createElement('div');d.className='vt';d.innerHTML=`<video src="${it.f}" muted loop playsinline preload="metadata"></video><span class="play">▶</span><span class="who">${it.t}</span>`;d.onclick=()=>VM.open(VA,n);row.appendChild(d)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target.querySelector('video');e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.4});
+row.querySelectorAll('.vt').forEach(x=>io.observe(x));})();
+// 捲動進場動畫（標題淡入上浮、圖片縮放進場，同 Revive）
+(()=>{if(!('IntersectionObserver' in window))return;
+const mark=(el,d)=>{el.classList.add('rv');if(d)el.style.setProperty('--d',d+'s')};
+document.querySelectorAll('main .h2, section .h2').forEach(h=>{if(!h.closest('.hero'))mark(h,.15)});
+['.pcard','.need-grid>a','.trust>div','.promise-row>div','.post','.ba-grid>div','.vt'].forEach(sel=>document.querySelectorAll(sel).forEach((el,i)=>mark(el,.25+(i%5)*.1)));
+document.querySelectorAll('.imgcard .card,.f-copy>*,.f-pic,.quiz p,.quiz .btn,.news p,.news form,.strip p,.cmp-copy,.eyebrow').forEach(el=>mark(el,.3));
+document.querySelectorAll('.imgcard .pic').forEach(el=>el.classList.add('zo'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.zo').forEach(el=>io.observe(el));})();
+// 商品輪播圓點
+(()=>{const s=document.getElementById('pslider'),d=[...document.querySelectorAll('#pdots i')];s.addEventListener('scroll',()=>{const n=Math.round(s.scrollLeft/(s.scrollWidth-s.clientWidth||1)*(d.length-1));d.forEach((x,i)=>x.classList.toggle('on',i===n))});
+d.forEach((x,i)=>x.onclick=()=>s.scrollTo({left:i*(s.scrollWidth-s.clientWidth)/(d.length-1),behavior:'smooth'}));})();
+// 前後對比拉桿
+document.querySelectorAll('.compare').forEach(c=>{const r=c.querySelector('input');r.addEventListener('input',()=>c.style.setProperty('--pos',r.value+'%'))});
+// 文章捲動進度條
+(()=>{const r=document.getElementById('brow'),b=document.getElementById('bbar');const f=()=>{const p=r.clientWidth/r.scrollWidth;b.style.width=Math.min(100,(p+(r.scrollLeft/(r.scrollWidth||1)))*100)+'%'};r.addEventListener('scroll',f);f();})();
+})();</script>
