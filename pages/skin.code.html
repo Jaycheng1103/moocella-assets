@@ -1,0 +1,163 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet"><style>
+html.mcxs-on #shopline-section-announcement,html.mcxs-on #shopline-section-header,html.mcxs-on #shopline-section-footer,html.mcxs-on .sl-goto-top{display:none!important}
+.mcxs-skin{display:none}
+html.mcxs-on .mcxs-skin{display:block}
+.mcxs{font-size:16px;line-height:normal;text-align:start;text-transform:none;letter-spacing:normal;font-weight:400}
+.mcxs :where(:not(svg,svg *)){all:revert}
+html.mcxs-on .mcxs-top{display:contents}
+.mcxs{
+  --wine:#5A2835; --wine-dark:#3E1823; --wine-2:#7A3B4E;
+  --blush:#FBE9E4; --cream:#FFF5F1; --pink:#F8EDEB; --footer:#F8F0F2;
+  --gold:#C9A86A; --ink:#2B2B2B; --mute:#7A7A7A; --line:#E7E2E1;
+  --ph:#EDE6E4;
+  --serif:"LXGW WenKai TC","Noto Serif TC",serif; --sans:"Chiron GoRound TC","PingFang TC","Noto Sans TC",sans-serif;
+  --wrap:1312px;
+}
+.mcxs *{box-sizing:border-box}
+.mcxs{overflow-x:clip;margin:0;font-family:var(--sans);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+.mcxs img{display:block;max-width:100%}
+.mcxs a{color:inherit;text-decoration:none}
+.mcxs button{font:inherit;cursor:pointer}
+.mcxs .wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media(min-width:900px){.mcxs .wrap{padding:0 64px;max-width:1440px}}
+.mcxs .ann{background:var(--wine);color:#fff;height:48px;display:flex;align-items:center;justify-content:center;position:relative;font-size:14px;letter-spacing:.04em}
+.mcxs .ann button{position:absolute;top:0;height:48px;width:48px;background:none;border:0;color:#fff;font-size:22px}
+.mcxs .ann .prev{left:16px}
+.mcxs .ann .next{right:16px}
+.mcxs .ann-msg{display:none;padding:0 56px;text-align:center}
+.mcxs .ann-msg.on{display:block}
+.mcxs header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.mcxs .hdr{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;padding:0 32px;height:84px;max-width:1440px;margin:0 auto}
+.mcxs .logo img{height:48px;width:auto}
+.mcxs .nav{display:flex;justify-content:center;align-items:center;gap:34px;font-size:14px;font-weight:500;letter-spacing:.06em;white-space:nowrap;height:100%}
+.mcxs .nav>div{position:relative;height:100%;display:flex;align-items:center}
+.mcxs .nav a{position:relative;display:inline-flex;align-items:center;gap:6px;padding:6px 0;color:var(--ink);transition:color .2s}
+.mcxs .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.mcxs .nav a:hover{color:var(--wine)}
+.mcxs .nav a:hover::after{transform:scaleX(1)}
+.mcxs .nav .chev{width:9px;height:9px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .25s}
+.mcxs .has-mega:hover .chev{transform:translateY(1px) rotate(-135deg)}
+.mcxs .tools{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--ink)}
+.mcxs .tools .cur{letter-spacing:.06em;font-weight:500}
+.mcxs .tools svg{width:21px;height:21px;display:block;stroke:currentColor;fill:none;stroke-width:1.6;transition:color .2s}
+.mcxs .tools a:hover{color:var(--wine)}
+.mcxs .tools .cart{position:relative}
+.mcxs .tools .cart b{position:absolute;top:-6px;right:-8px;width:16px;height:16px;border-radius:50%;background:var(--wine);color:#fff;font-size:10px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.mcxs .burger{display:none;background:none;border:0;width:40px;height:40px;padding:8px;color:var(--ink)}
+.mcxs .burger svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none}
+.mcxs .mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.08);padding:32px 64px 40px;display:none;grid-template-columns:3fr 1fr;gap:48px;animation:mcx-megaIn .25s ease}
+@keyframes mcx-megaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mcxs header.site:has(.has-mega:hover) .mega,.mcxs .mega:hover{display:grid}
+.mcxs .mega h6{margin:0 0 16px;font-size:12px;letter-spacing:.16em;color:var(--mute)}
+.mcxs .mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mcxs .mega-item{display:flex;gap:14px;align-items:center}
+.mcxs .mega-item .pic{width:96px;height:96px;border-radius:8px;background:var(--blush);flex:none;overflow:hidden}
+.mcxs .mega-item .pic img{width:100%;height:100%;object-fit:contain}
+.mcxs .mega-item b{display:block;font-size:15px}
+.mcxs .mega-item small{display:block;color:var(--wine);font-size:13px;margin-top:4px}
+.mcxs .mega-item em{display:block;color:var(--mute);font-size:12px;font-style:normal;margin-top:2px}
+.mcxs .mega ul{list-style:none;margin:0;padding:0;line-height:2.3;font-size:15px}
+.mcxs .logos{display:flex;align-items:center;height:139px;overflow:hidden;gap:40px;padding-left:20px}
+.mcxs .logos .lbl{font-size:12px;letter-spacing:.2em;font-weight:500;flex:none}
+@keyframes mcx-mq{to{transform:translateX(-50%)}}
+.mcxs footer{background:var(--footer);padding:72px 0 40px}
+.mcxs .foot{display:grid;grid-template-columns:420px repeat(3,1fr);gap:40px}
+.mcxs .foot .about p{line-height:1.7;margin:30px 0}
+.mcxs .soc{display:flex;gap:16px}
+.mcxs .soc a{width:41px;height:32px;border-radius:9px;background:var(--ink);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center}
+.mcxs .foot h4{margin:0 0 18px;font-size:16px}
+.mcxs .foot ul{list-style:none;padding:0;margin:0;line-height:2;font-size:15px}
+.mcxs .legal{margin-top:56px;font-size:12px;color:var(--mute);line-height:1.8}
+@media(max-width:1100px){.mcxs .hdr{grid-template-columns:40px 1fr auto;gap:12px;padding:0 16px;height:68px}
+.mcxs .burger{display:block;grid-column:1;grid-row:1}
+.mcxs .logo{grid-column:2;grid-row:1;justify-self:center}
+.mcxs .logo img{height:38px}
+.mcxs .tools{grid-column:3;grid-row:1;gap:14px}
+.mcxs .nav{display:none}
+.mcxs .mega{display:none!important}
+.mcxs .nav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;height:auto;position:absolute;top:100%;left:0;right:0;background:#fff;padding:8px 20px 16px;box-shadow:0 10px 20px rgba(0,0,0,.08)}
+.mcxs .nav.open>div{height:auto;border-bottom:1px solid var(--line)}
+.mcxs .nav.open a{padding:14px 0;width:100%}
+.mcxs .nav.open .chev{display:none}
+.mcxs .foot{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.mcxs .tools .cur,.mcxs .tools .acct{display:none}
+.mcxs .mega{display:none!important}
+.mcxs .logos{gap:16px}
+.mcxs .foot{grid-template-columns:1fr}}
+@keyframes mcx-shine{0%{left:-80%}55%,100%{left:140%}}
+@keyframes mcx-sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1.5deg)}}
+@keyframes mcx-vmIn{from{opacity:0}to{opacity:1}}
+@keyframes mcx-vmUp{from{transform:translateY(30px) scale(.97)}to{transform:none}}
+.mcxs small.tag-todo{display:inline-block}
+.mcxs li.tag-todo{display:table;margin:3px 0}
+.mcxs p.tag-todo{display:table}
+@media(min-width:900px){.mcxs .quiz.wrap{padding-left:64px;padding-right:64px}}
+.mcxs .soc a{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--wine);border:1px solid #EAD6D2;transition:background .2s,color .2s,transform .2s}
+.mcxs .soc a:hover{background:var(--wine);color:#fff;transform:translateY(-2px)}
+.mcxs .foot ul li{transition:color .2s;cursor:pointer}
+.mcxs .foot ul li:hover{color:var(--wine)}
+.mcxs a.stars span{color:var(--mute);margin-left:6px;text-decoration:underline;text-underline-offset:3px}</style>
+<div class="mcxs mcxs-skin mcxs-top" id="mcxs-top"><div class="ann">
+  <button class="prev" aria-label="上一則">‹</button>
+  <div class="ann-msg on">預購開跑｜美妍水光飲每盒 NT$1,680，預計 11 月陸續出貨</div>
+  <div class="ann-msg">新竹物流宅配 NT$80，7-ELEVEN 取貨不付款 NT$65</div>
+  <button class="next" aria-label="下一則">›</button>
+</div>
+<!-- 01 Header -->
+<header class="site">
+  <div class="hdr">
+    <a class="logo" href="/"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6aa909f467c0d23176a93de6/1200x.webp?source_format=png" alt="Moocella 沐菈"></a>
+    <button class="burger" aria-label="選單" onclick="this.parentNode.querySelector('.nav').classList.toggle('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav">
+      <div class="has-mega"><a href="/pages/moocella-shop">全部商品<i class="chev"></i></a></div>
+      <div class="has-mega"><a href="/#need">營養專家團隊<i class="chev"></i></a></div>
+      <div><a href="/#how">怎麼喝</a></div>
+      <div><a href="/#vtest">沐菈日常</a></div>
+      <div><a href="/pages/moocella-shop#ingredients">關於原料</a></div>
+      <div><a href="/#consult">客服諮詢</a></div>
+    </nav>
+    <div class="tools">
+      <span class="cur">TW｜NT$</span>
+      <a href="/products" title="搜尋" aria-label="搜尋"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></a>
+      <a class="acct" href="/users/sign_in" title="會員" aria-label="會員"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4 20.5c1.2-4 4.4-6 8-6s6.8 2 8 6"/></svg></a>
+      <a class="cart" href="/cart" title="購物車" aria-label="購物車"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg></a>
+    </div>
+  </div>
+  <div class="mega">
+    <div>
+      <h6>全部商品</h6>
+      <div class="mega-grid">
+        <a class="mega-item" href="/pages/moocella-shop?plan=1"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt=""></div><div><b>美妍水光飲｜1 盒</b><small>NT$1,680・另計運費</small><em>莓果風味</em></div></a>
+        <a class="mega-item" href="/pages/moocella-shop?plan=2"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd7ba5c999740e9c8054/1200x.webp?source_format=png" alt="" style="object-fit:cover"></div><div><b>美妍水光飲｜2 盒</b><small>NT$3,360・免運</small><em>莓果風味</em></div></a>
+        <a class="mega-item" href="/pages/moocella-shop?plan=10"><div class="pic"><img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6af6cd85186e90f5f5a739ca/1200x.webp?source_format=png" alt=""></div><div><b>美妍水光飲｜10 盒組</b><small>NT$15,120・9 折</small><em>莓果風味</em></div></a>
+      </div>
+    </div>
+    <div>
+      <h6>營養專家團隊</h6>
+      <ul><li>唐櫻翠 醫師</li><li>創辦人 Ariel</li><li>簡子勻 營養師</li><li>錢靜蓉 營養師</li></ul>
+    </div>
+  </div>
+</header></div>
+<div class="mcxs mcxs-skin" id="mcxs-foot"><footer>
+  <div class="wrap foot">
+    <div class="about">
+      <img src="https://shoplineimg.com/6a0c197329b5de004d6571e5/6aa909f467c0d23176a93de6/1200x.webp?source_format=png" alt="Moocella" style="height:58px;width:auto">
+      <p>撕開就喝的美妍飲，把照顧自己放進每天的日常。好好照顧自己，是一種實力。</p>
+      <b style="font-size:14px">追蹤我們</b>
+      <div class="soc" style="margin-top:14px"><a href="https://www.facebook.com/profile.php?id=61594309412572" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21z"/></svg></a><a href="https://www.instagram.com/moocellatw/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></a><a href="https://www.threads.com/@moocellatw" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M16.5 11.2c-.4-2.6-2-3.9-4.4-3.9-2.6 0-4.3 1.9-4.3 4.7 0 3 1.8 4.9 4.6 4.9 2.3 0 3.9-1.3 3.9-3.1 0-1.8-1.6-2.7-3.6-2.7-1.6 0-2.7.7-2.7 1.8 0 1 .9 1.6 2 1.6 2 0 3.1-1.6 3.1-4.4M12 21c-5 0-8.5-3.6-8.5-9S7 3 12 3c4 0 6.9 2.1 8 5.6"/></svg></a><a href="#" aria-label="LINE"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.1.7.2.8.5.1.2 0 .6 0 .9l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.3-5.4c1.3-1.4 1.9-2.9 1.9-4.4 0-4-4-7.2-9.2-7.2zM8.3 12.9H6.6c-.2 0-.4-.2-.4-.4V9c0-.2.2-.4.4-.4s.4.2.4.4v3.1h1.3c.2 0 .4.2.4.4s-.2.4-.4.4zm1.7-.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9c0-.2.2-.4.4-.4s.4.2.4.4zm4.2 0c0 .2-.1.3-.3.4h-.1c-.1 0-.3-.1-.3-.2l-1.8-2.4v2.2c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9c0-.2.1-.3.3-.4h.1c.1 0 .3.1.3.2l1.8 2.4V9c0-.2.2-.4.4-.4s.4.2.4.4zm2.8-2.2c.2 0 .4.2.4.4s-.2.4-.4.4h-1.3v.8H17c.2 0 .4.2.4.4s-.2.4-.4.4h-1.7c-.2 0-.4-.2-.4-.4V9c0-.2.2-.4.4-.4H17c.2 0 .4.2.4.4s-.2.4-.4.4h-1.3v.9z"/></svg></a></div>
+    </div>
+    <div><h4>商品</h4><ul><li><a href="/pages/moocella-shop">美妍水光飲</a></li></ul></div>
+    <div><h4>顧客服務</h4><ul><li><a href="/pages/faq">常見問題</a></li><li><a href="/about/delivery-policy">付款與配送</a></li><li><a href="/about/policy">退換貨政策</a></li><li><a href="/about/terms">條款與細則</a></li><li><a href="/about/privacy-policy">隱私政策</a></li></ul></div>
+    <div><h4>關於我們</h4><ul><li><a href="/about">品牌故事</a></li><li><a href="/pages/journal">沐菈日常</a></li><li><a href="/about/anti-fraud">防詐騙宣導</a></li><li><a href="https://lin.ee/p22IPUQ">聯絡我們</a></li></ul></div>
+  </div>
+  <div class="wrap legal">禾献股份有限公司｜統編 62152396｜02-25147751（週一至週五 10:00–17:00）｜moocellatw@gmail.com｜台北市松山區南京東路四段133巷9弄33號1樓</div>
+</footer></div>
+<script>(function(){
+var T=document.getElementById('mcxs-top'),F=document.getElementById('mcxs-foot');if(!T||!F)return;
+if(document.getElementById('mcx')){T.remove();F.remove();return}
+var H=document.getElementById('shopline-section-header')||document.getElementById('shopline-section-announcement'),C=document.getElementById('Content');
+if(H)H.parentNode.insertBefore(T,H);else document.body.insertBefore(T,document.body.firstChild);
+if(C&&C.parentNode)C.parentNode.insertBefore(F,C.nextSibling);else document.body.appendChild(F);
+document.documentElement.classList.add('mcxs-on');
+var m=[].slice.call(T.querySelectorAll('.ann-msg')),i=0;if(m.length>1){var sh=function(n){m[i].classList.remove('on');i=(n+m.length)%m.length;m[i].classList.add('on')};T.querySelector('.ann .prev').onclick=function(){sh(i-1)};T.querySelector('.ann .next').onclick=function(){sh(i+1)};setInterval(function(){sh(i+1)},5000)}
+})();</script>
